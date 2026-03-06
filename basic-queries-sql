@@ -1,0 +1,30 @@
+SQL Data Analysis Journe
+
+Welcome! This repository serves as a comprehensive collection of my SQL practice
+codes and data analysis projects developed throughout my learning journey.
+
+ Skills Covered
+- **Basic:** SELECT, WHERE, GROUP BY, HAVING, ORDER BY
+- **Intermediate:** Joins (Inner, Left, Right), Aggregate Functions (COUNT, SUM, AVG)
+- **Advanced:** CTE (Common Table Expressions), Window Functions (Learning in progress)
+
+Project Structure
+- `01_Basics/`: Basic selection and filtering practice.
+- `02_CTEs/`: Solving complex business problems using CTEs.
+- `03_Salary_Analysis/`: Case studies on employee salary and department data.
+
+Recent Practice Problem
+**Problem:** $50,000 এর বেশি বেতন পাওয়া কর্মীদের ডিপার্টমেন্ট অনুযায়ী সংখ্যা বের করা।
+**Solution:**
+```sql
+WITH Most_salary AS (
+    SELECT * FROM employee_salary
+    WHERE salary >= 50000
+)
+SELECT occupation, COUNT(*)
+FROM Most_salary
+GROUP BY occupation;
+
+
+---
+Created by Shakib Ahmed Sayem
